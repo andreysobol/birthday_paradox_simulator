@@ -53,6 +53,11 @@ Higher **T** improves statistical accuracy.
 pip install -r requirements.txt
 ```
 
+### Install Development Dependencies (for testing)
+```bash
+pip install -r requirements-dev.txt
+```
+
 ## Usage
 
 ### Basic Usage
@@ -147,6 +152,46 @@ The plot displays:
 - **Curve**: Shows exponential growth pattern
 - **Reference lines**: 50% probability threshold
 - **Annotations**: Key landmarks (e.g., 23 people)
+
+## Testing
+
+The project includes a comprehensive test suite with 35 tests covering:
+- Core functionality (birthday generation, collision detection)
+- Monte Carlo trial execution
+- Theoretical probability calculations
+- Edge cases and boundary conditions
+- Integration tests
+
+### Running Tests
+
+Run all tests:
+```bash
+pytest test_birthday_paradox.py -v
+```
+
+Run tests with coverage report:
+```bash
+pytest test_birthday_paradox.py -v --cov=birthday_paradox --cov-report=term-missing
+```
+
+Run a specific test class:
+```bash
+pytest test_birthday_paradox.py::TestBirthdayParadoxSimulator -v
+```
+
+Run a specific test:
+```bash
+pytest test_birthday_paradox.py::TestBirthdayParadoxSimulator::test_run_trials_return_structure -v
+```
+
+### Continuous Integration
+
+The project uses GitHub Actions to automatically run tests on:
+- Multiple operating systems (Ubuntu, Windows, macOS)
+- Multiple Python versions (3.8, 3.9, 3.10, 3.11, 3.12)
+- Every push and pull request to main/master/develop branches
+
+See `.github/workflows/tests.yml` for the full CI configuration.
 
 ## License
 
