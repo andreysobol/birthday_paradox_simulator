@@ -34,7 +34,7 @@ env/
 *~
 
 # Output files
-*.png
+# *.png  # Commented out to allow example images to be committed
 *.jpg
 *.pdf
 
