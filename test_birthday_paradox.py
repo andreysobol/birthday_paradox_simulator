@@ -228,8 +228,8 @@ class TestEdgeCases:
     def test_zero_trials(self):
         """Test simulation with zero trials."""
         simulator = BirthdayParadoxSimulator(trials=0)
-        # Zero trials will cause a division by zero error
-        with pytest.raises(ZeroDivisionError):
+        # Zero trials will cause a division by zero error in probability calculation
+        with pytest.raises(ZeroDivisionError, match="division by zero"):
             result = simulator.run_trials(group_size=23)
     
     def test_one_trial(self):
