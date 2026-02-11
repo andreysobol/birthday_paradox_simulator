@@ -120,6 +120,35 @@ print(f"Theoretical probability for 23 people: {theoretical:.4f}")
 
 The famous result is that with just **23 people**, there's a better than 50% chance that two share a birthday!
 
+## Example Visualizations
+
+The repository includes example output images from running the simulator, demonstrating the birthday paradox in action:
+
+### Main Simulation Output
+
+![Birthday Paradox Simulation](birthday_paradox.png)
+
+**`birthday_paradox.png`** - Comprehensive probability analysis across group sizes 2-70 (in steps of 2). This visualization shows the complete collision probability curve with 10,000 trials per group size. The plot clearly demonstrates the exponential growth pattern and includes a reference line at 50% probability. Key theoretical landmarks (10, 23, 30, 50 people) are compared with empirical results, showing excellent agreement between simulation and theory.
+
+### Basic Example
+
+![Basic Example](example_basic.png)
+
+**`example_basic.png`** - Simplified visualization covering group sizes 5-60 in steps of 5. This example uses 10,000 trials and provides a clear overview of how collision probability increases with group size. The plot emphasizes the rapid growth in the 15-30 people range and demonstrates that by 50 people, the probability exceeds 97%.
+
+### Detailed Analysis Around the Critical Threshold
+
+![Detailed Analysis](example_detailed.png)
+
+**`example_detailed.png`** - High-resolution analysis focused on the critical region around 23 people (group sizes 15-35). This visualization uses 20,000 trials for improved accuracy and includes an annotation highlighting the famous result: at 23 people, there's approximately a 50.5% probability of a shared birthday. This plot is particularly useful for understanding the rapid probability increase in this range.
+
+All visualizations include:
+- Clear axis labels and titles
+- Grid lines for easy reading
+- Reference line at 50% probability
+- High-resolution output (300 DPI)
+- Professional styling with matplotlib
+
 ## Implementation Architecture
 
 ### Core Components
