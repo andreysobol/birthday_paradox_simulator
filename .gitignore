@@ -35,6 +35,8 @@ env/
 
 # Output files
 *.png
+!birthday_paradox.png
+!example_*.png
 *.jpg
 *.pdf
 
