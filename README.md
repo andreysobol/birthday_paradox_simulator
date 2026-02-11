@@ -187,8 +187,8 @@ pytest test_birthday_paradox.py::TestBirthdayParadoxSimulator::test_run_trials_r
 ### Continuous Integration
 
 The project uses GitHub Actions to automatically run tests on:
-- Multiple operating systems (Ubuntu, Windows, macOS)
-- Multiple Python versions (3.8, 3.9, 3.10, 3.11, 3.12)
+- Ubuntu (latest version)
+- Python 3.12
 - Every push and pull request to main/master/develop branches
 
 See `.github/workflows/tests.yml` for the full CI configuration.
