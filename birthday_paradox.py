@@ -7,7 +7,7 @@ that at least two individuals in a group share the same birthday.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Any
 
 
 class BirthdayParadoxSimulator:
@@ -59,7 +59,7 @@ class BirthdayParadoxSimulator:
         """
         return len(np.unique(birthdays)) < len(birthdays)
     
-    def run_trials(self, group_size: int) -> Dict[str, any]:
+    def run_trials(self, group_size: int) -> Dict[str, Any]:
         """
         Run Monte Carlo trials for a specific group size.
         
@@ -89,7 +89,7 @@ class BirthdayParadoxSimulator:
             'probability': probability
         }
     
-    def simulate(self, group_sizes: List[int]) -> List[Dict[str, any]]:
+    def simulate(self, group_sizes: List[int]) -> List[Dict[str, Any]]:
         """
         Run simulation for multiple group sizes.
         
@@ -109,7 +109,7 @@ class BirthdayParadoxSimulator:
         
         return results
     
-    def plot_results(self, results: List[Dict[str, any]], 
+    def plot_results(self, results: List[Dict[str, Any]], 
                      save_path: str = None, show: bool = True):
         """
         Plot collision probability vs group size.
