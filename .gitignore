@@ -34,7 +34,9 @@ env/
 *~
 
 # Output files
-# *.png  # Commented out to allow example images to be committed
+*.png
+!birthday_paradox.png
+!example_*.png
 *.jpg
 *.pdf
 
